@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="BookLibraryInfrastructure/BookLibrary.Infrastructure.csproj" Id="1d16b8e2-9e67-4449-bc76-558c9a9680b9" />
+  </Folder>
+  <Folder Name="/Tools/">
+    <Project Path="BookImporter/BookImporter.csproj" />
+  </Folder>
+  <Project Path="BookLibrary/BookLibrary.Api.csproj" />
+</Solution>

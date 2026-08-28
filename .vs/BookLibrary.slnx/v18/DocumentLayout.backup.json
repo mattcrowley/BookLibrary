@@ -1,0 +1,204 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\controllers\\v2\\bookretrievalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\controllers\\v2\\bookretrievalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\controllers\\v1\\bookretrievalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\controllers\\v1\\bookretrievalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D175B-6F83-189A-89EE-DE7144E6F2B1}|BookImporter\\BookImporter.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\bookimporter\\openlibrarytsvimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978D175B-6F83-189A-89EE-DE7144E6F2B1}|BookImporter\\BookImporter.csproj|solutionrelative:bookimporter\\openlibrarytsvimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{978D175B-6F83-189A-89EE-DE7144E6F2B1}|BookImporter\\BookImporter.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\bookimporter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978D175B-6F83-189A-89EE-DE7144E6F2B1}|BookImporter\\BookImporter.csproj|solutionrelative:bookimporter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\booklibrary.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\booklibrary.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibrary\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A22C75DE-D12D-07BA-B770-571FC44B1CF2}|BookLibrary\\BookLibrary.Api.csproj|solutionrelative:booklibrary\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D16B8E2-9E67-4449-BC76-558C9A9680B9}|BookLibraryInfrastructure\\BookLibrary.Infrastructure.csproj|c:\\users\\mattc\\documents\\job search\\code\\booklibrary\\booklibraryinfrastructure\\services\\external\\openlibraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D16B8E2-9E67-4449-BC76-558C9A9680B9}|BookLibraryInfrastructure\\BookLibrary.Infrastructure.csproj|solutionrelative:booklibraryinfrastructure\\services\\external\\openlibraryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookRetrievalController.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Controllers\\V2\\BookRetrievalController.cs",
+              "RelativeDocumentMoniker": "BookLibrary\\Controllers\\V2\\BookRetrievalController.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Controllers\\V2\\BookRetrievalController.cs",
+              "RelativeToolTip": "BookLibrary\\Controllers\\V2\\BookRetrievalController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAUwKcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T18:54:17.514Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookLibrary.http",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\BookLibrary.http",
+              "RelativeDocumentMoniker": "BookLibrary\\BookLibrary.http",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\BookLibrary.http",
+              "RelativeToolTip": "BookLibrary\\BookLibrary.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-08-24T17:55:10.676Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Program.cs",
+              "RelativeDocumentMoniker": "BookLibrary\\Program.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Program.cs",
+              "RelativeToolTip": "BookLibrary\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T14:47:33.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "BookLibrary\\Models\\Book.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Models\\Book.cs",
+              "RelativeToolTip": "BookLibrary\\Models\\Book.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T14:47:27.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OpenLibraryTsvImporter.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookImporter\\OpenLibraryTsvImporter.cs",
+              "RelativeDocumentMoniker": "BookImporter\\OpenLibraryTsvImporter.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookImporter\\OpenLibraryTsvImporter.cs",
+              "RelativeToolTip": "BookImporter\\OpenLibraryTsvImporter.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAnwHgAAACkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T13:14:19.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\appsettings.json",
+              "RelativeDocumentMoniker": "BookLibrary\\appsettings.json",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\appsettings.json",
+              "RelativeToolTip": "BookLibrary\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-27T21:08:52.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookRetrievalController.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Controllers\\V1\\BookRetrievalController.cs",
+              "RelativeDocumentMoniker": "BookLibrary\\Controllers\\V1\\BookRetrievalController.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Controllers\\V1\\BookRetrievalController.cs",
+              "RelativeToolTip": "BookLibrary\\Controllers\\V1\\BookRetrievalController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T20:10:40.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BookLibrary\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BookLibrary\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-27T19:48:47.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OpenLibraryService.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibraryInfrastructure\\Services\\External\\OpenLibraryService.cs",
+              "RelativeDocumentMoniker": "BookLibraryInfrastructure\\Services\\External\\OpenLibraryService.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibraryInfrastructure\\Services\\External\\OpenLibraryService.cs",
+              "RelativeToolTip": "BookLibraryInfrastructure\\Services\\External\\OpenLibraryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T14:52:07.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BookLibrary\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookLibrary\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "BookLibrary\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T18:52:41.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookImporter\\Program.cs",
+              "RelativeDocumentMoniker": "BookImporter\\Program.cs",
+              "ToolTip": "C:\\Users\\mattc\\Documents\\Job Search\\Code\\BookLibrary\\BookImporter\\Program.cs",
+              "RelativeToolTip": "BookImporter\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T19:42:37.912Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

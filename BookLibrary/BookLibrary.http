@@ -1,0 +1,52 @@
+@host = http://localhost:5034
+@BookRetrievalV1Controller = {{host}}/api/v1.0/BookRetrieval
+@BookRetrievalV2Controller = {{host}}/api/v2.0/BookRetrieval
+
+//
+// V1 controller
+GET {{BookRetrievalV1Controller}}
+Accept: application/json
+###
+
+GET {{BookRetrievalV1Controller}}/5
+Accept: application/json
+###
+
+//
+// V2
+
+GET {{BookRetrievalV2Controller}}/works-filtered
+Accept: application/json
+###
+
+GET {{BookRetrievalV2Controller}}/get-works-by-search-direct-api
+Accept: application/json
+###
+
+GET {{BookRetrievalV2Controller}}/get-works-with-description
+Accept: application/json
+###
+
+GET {{BookRetrievalV2Controller}}/4
+Accept: application/json
+###
+
+@workSearchTerm = Lord of the Rings
+// Special
+GET {{BookRetrievalV2Controller}}/get-works-by-search-direct-api?searchTerm={{workSearchTerm}}
+Accept: application/json
+###
+
+
+# @newItemName = Wireless Mouse
+# @newItemPrice = 29.99
+
+# ### Test POST Request with Body Parameters
+# POST {{BookRetrievalV2Controller}}/api/products
+# Content-Type: application/json
+
+# {
+#   "name": "{{newItemName}}",
+#   "price": {{newItemPrice}},
+#   "inStock": true
+# }

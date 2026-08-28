@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "BookImporter": {
+      "commandName": "Project",
+      "commandLineArgs": "\"D:\\Downloads\\ol_dump_works_2026-07-31.txt\""
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
