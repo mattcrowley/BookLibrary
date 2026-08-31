@@ -1,6 +1,7 @@
 @host = http://localhost:5034
 @BookRetrievalV1Controller = {{host}}/api/v1.0/BookRetrieval
 @BookRetrievalV2Controller = {{host}}/api/v2.0/BookRetrieval
+@AppSecretHeader = {{AppAuthenticationSecret}}
 
 //
 // V1 controller
@@ -8,7 +9,7 @@ GET {{BookRetrievalV1Controller}}
 Accept: application/json
 ###
 
-GET {{BookRetrievalV1Controller}}/5
+GET {{BookRetrievalV1Controller}}/500
 Accept: application/json
 ###
 
@@ -17,17 +18,19 @@ Accept: application/json
 
 GET {{BookRetrievalV2Controller}}/works-filtered
 Accept: application/json
-###
-
-GET {{BookRetrievalV2Controller}}/get-works-by-search-direct-api
-Accept: application/json
+X-API-KEY: {{AppSecretHeader}}
 ###
 
 GET {{BookRetrievalV2Controller}}/get-works-with-description
 Accept: application/json
 ###
 
-GET {{BookRetrievalV2Controller}}/4
+GET {{BookRetrievalV2Controller}}/40000
+Accept: application/json
+###
+
+// Gets search without a search term from direct API, not DB
+GET {{BookRetrievalV2Controller}}/get-works-by-search-direct-api
 Accept: application/json
 ###
 

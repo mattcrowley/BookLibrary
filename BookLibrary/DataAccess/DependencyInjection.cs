@@ -9,18 +9,20 @@ namespace BookLibrary.Api.DataAccess
         {
             ProviderRegistration.RegisterSqlServer();
 
-            services.AddSingleton(new Database(new DatabaseOptions
+            // Register DB options so we can use DI for each controller that needs it
+            // TODO: db connection relies on config, but provider name still assumes sql server, will eventually need
+            // to handle that.
+            var dbOptions = new DatabaseOptions
             {
                 ProviderName = ProviderRegistration.SqlServer,
-                ConnectionString = configuration.GetConnectionString("Default")
+                ConnectionString = configuration.GetConnectionString("AppDbContext")
                     ?? SqlServerConnectionStrings.LocalDb("MyAppDb"),
                 MaxRetryAttempts = 2,
                 CommandTimeoutSeconds = 30,
-            }));
+            };
 
-            // As you add repositories, register them here too:
-            // services.AddScoped<IBookRepository, BookRepository>();
-            // services.AddScoped<IAuthorRepository, AuthorRepository>();
+            services.AddSingleton(dbOptions);
+            services.AddSingleton(new Database(dbOptions));
 
             return services;
         }

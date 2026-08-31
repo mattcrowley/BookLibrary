@@ -1,16 +1,23 @@
 using Asp.Versioning;
+using BookLibrary.Api.Constants;
 using BookLibrary.Api.Data;
 using BookLibrary.Api.Models;
 using BookLibrary.Infrastructure.Services.External;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
 namespace BookLibrary.Api.Controllers.V2
 {
+    /// <summary>
+    /// Uses Entity Framework to query our DB for any data
+    /// </summary>
     [ApiController]
     [ApiVersion("2.0")]
-    [Route("api/v{version:apiVersion}/[controller]")] // removes number from any controller name
+    [Route("api/v{version:apiVersion}/[controller]")] // note to remember: versioning removes number from any controller name if number is at the end ex BookRetrievalV2X -> BookRetrievalVX
     public class BookRetrievalController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -24,18 +31,15 @@ namespace BookLibrary.Api.Controllers.V2
             _openLibraryService = openLibraryService;
         }
 
-        // TODO: This is an interesting way to not specify route of each method
-        //[HttpGet("by-field")]
-        //public IActionResult GetCustomerProfileByField()
-        //how to calculate it: [Controller Base Route] + / + [Attribute Path]The Resulting Endpoint: GET /api/v1/customer-profiles/by-field
-
-        // GET: api/Controller/works-filtered
         [HttpGet("works-filtered")]
         [MapToApiVersion("2.0")]
-        //[Route("get-works")]
+        //[Authorize(AuthenticationSchemes = AppConstants.ApiKeySchemeName)] // API Key only
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] // JWT
+        [Authorize(Policy = AppConstants.AuthenticationDualAuthPolicy)] // Custom scheme supporting both
         public async Task<ActionResult<IEnumerable<Works>>> GetWorks()
         {
-            var books = await _context.Works.AsNoTracking()
+            var books = await _context.Works
+                .AsNoTracking()
                 .Select(c => new Works
                 {
                     Id = c.Id,
@@ -54,6 +58,8 @@ namespace BookLibrary.Api.Controllers.V2
                 PropertyNameCaseInsensitive = true
             };
 
+            // TODO: I am planning on these being new fields, not storing raw json anymore, since it has lots of data
+            // and querying it requires manual parsing, or more complex logic to parse it via EF
             // Now parse our json for more fields
             //foreach (var book in books)
             //{
@@ -81,29 +87,28 @@ namespace BookLibrary.Api.Controllers.V2
         [Route("get-works-with-description")]
         public async Task<ActionResult<IEnumerable<WorkSummaryDTO>>> GetWorksByDescription()
         {
-            // Where has to be done first since our data does not have the raw json parsed
+            // The Where statement has to be done first since our data does not have the raw json parsed
             var books = await _context.Works
-            .Where(c => c.RawJson.Description.Value != null && c.RawJson.Description.Value != "")
-            .Select(c => new WorkSummaryDTO
-            (
-                c.Id,
-                c.Title,
-                c.Subtitle,
-                c.RawJson.Description.Value,
-                c.LastModified,
-                c.OLKey
-            ))
-            .Take(10)
+                .Where(c => c.RawJson.Description.Value != null && c.RawJson.Description.Value != "")
+                .Select(c => new WorkSummaryDTO
+                (
+                    c.Id,
+                    c.Title,
+                    c.Subtitle,
+                    c.RawJson.Description.Value,
+                    c.LastModified,
+                    c.OLKey
+                ))
+                .Take(10)
             .ToListAsync();
 
             return books;
         }
 
-        // GET: api/Book/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetBook(int id)
+        public async Task<ActionResult<Works>> GetBook(int id)
         {
-            var book = await _context.Books.FindAsync(id);
+            var book = await _context.Works.FindAsync(id);
 
             if (book == null)
             {
@@ -113,8 +118,6 @@ namespace BookLibrary.Api.Controllers.V2
             return book;
         }
 
-        // PUT: api/Book/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBook(int? id, Book book)
         {
@@ -144,7 +147,6 @@ namespace BookLibrary.Api.Controllers.V2
             return NoContent();
         }
 
-        // POST: api/Book
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
@@ -155,7 +157,6 @@ namespace BookLibrary.Api.Controllers.V2
             return CreatedAtAction("GetBook", new { id = book.Id }, book);
         }
 
-        // DELETE: api/Book/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook(int? id)
         {

@@ -15,20 +15,8 @@ namespace BookLibrary.Api.Controllers.V1
     public class BookRetrievalController : ControllerBase
     {
         private Database _databaseAccess;
-        public BookRetrievalController(Database db)
+        public BookRetrievalController(Database db, DatabaseOptions options)
         {
-            _databaseAccess = db;
-            // TODO: this is done every call, we need to cache this instead
-            // Build options - swap between LocalDB and SQLEXPRESS just by changing the connection string.
-            var options = new DatabaseOptions
-            {
-                ProviderName = ProviderRegistration.SqlServer,
-                ConnectionString = SqlServerConnectionStrings.LocalDb("Books"),
-                // ConnectionString = SqlServerConnectionStrings.SqlExpress("Books"),
-                MaxRetryAttempts = 5,
-                CommandTimeoutSeconds = 30,
-            };
-
             _databaseAccess = new Database(options, log: msg => Console.WriteLine(msg));
         }
 
@@ -41,24 +29,34 @@ namespace BookLibrary.Api.Controllers.V1
 
         // GET api/<BookRetrievalController>/5
         [HttpGet("{id}")]
-        public async Task<string> GetAsync(int id)
+        public async Task<List<WorkSummaryDTO>> GetAsync(int id)
         {
-            var count = await _databaseAccess.ExecuteScalarAsync<int>("SELECT COUNT(*) FROM Works;");
+            var count = await _databaseAccess.ExecuteScalarAsync<int>($"SELECT COUNT(*) FROM Works where Id = ${id};");
 
-            var widgets = await _databaseAccess.ExecuteReaderAsync(
-                "SELECT Id, Title, Subtitle FROM Works ORDER BY Id;",
-                reader =>
-                {
-                    int ordinal = reader.GetOrdinal("Title");
-                    string title = reader.IsDBNull(ordinal) ? "No title" : reader.GetString(ordinal);
-                    ordinal = reader.GetOrdinal("Subtitle");
-                    string subtitle = reader.IsDBNull(ordinal) ? "No subtitle" : reader.GetString(ordinal);
-                    return new WorkSummaryDTO(
-                        reader.GetInt32(0),
-                        title,
-                        subtitle, "", null, "");
-                });
-            return "value";
+            if (count > 0)
+            {
+                var listOfWorks = await _databaseAccess.ExecuteReaderAsync(
+                    $"SELECT TOP 1000 Id, Title, Subtitle FROM Works where Id = ${id};",
+                    reader =>
+                    {
+                        // Since some of these fields (subtitle especially) can be null, we need to be able to handle that
+                        // so we need to use getOrdinal and isDBNull methods
+                        int ordinal = reader.GetOrdinal("Title");
+                        string title = reader.IsDBNull(ordinal) ? "No title" : reader.GetString(ordinal);
+                        ordinal = reader.GetOrdinal("Subtitle");
+                        string subtitle = reader.IsDBNull(ordinal) ? "No subtitle" : reader.GetString(ordinal);
+                        return new WorkSummaryDTO(
+                            reader.GetInt32(0),
+                            title,
+                            subtitle, "", null, "");
+                    });
+
+                return listOfWorks;
+            }
+            else
+            {
+                return [];
+            }
         }
 
         // POST api/<BookRetrievalController>
