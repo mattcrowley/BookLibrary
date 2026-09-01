@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
@@ -36,6 +37,7 @@ namespace BookLibrary.Api.Controllers.V2
         //[Authorize(AuthenticationSchemes = AppConstants.ApiKeySchemeName)] // API Key only
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] // JWT
         [Authorize(Policy = AppConstants.AuthenticationDualAuthPolicy)] // Custom scheme supporting both
+        [EnableRateLimiting(RateLimiterConstants.BuiltInPolicyName)]
         public async Task<ActionResult<IEnumerable<Works>>> GetWorks()
         {
             var books = await _context.Works
